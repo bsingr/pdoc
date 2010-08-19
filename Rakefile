@@ -8,9 +8,9 @@ task :build_doc do
     :destination => OUTPUT_DIR,
     :syntax_highlighter => :pygments,
     :markdown_parser => :bluecloth,
-    :src_code_href => proc { |file, line|
-      "http://github.com/example/ex/#{file}##{line}"
-    },
+    # :src_code_href => proc { |file, line|
+    #   "http://github.com/example/ex/#{file}##{line}"
+    # },
     :pretty_urls => false,
     :bust_cache => true,
     :name => 'Example JavaScript Framework',
