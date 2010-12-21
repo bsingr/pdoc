@@ -112,7 +112,7 @@ module PDoc
             types = types.split(/\s+\|\s+/) if types.is_a?(String)
             types.map do |t|
               if match = /^\[([\w\d\$\.\(\)#]*[\w\d\$\(\)#])...\s*\]$/.match(t) # e.g.: [Element...]
-                "[#{auto_link(match[1], options)}…]"
+                "[#{auto_link(match[1], options)}#{[0x2026].pack("U")}]"
               else
                 auto_link(t, options)
               end
